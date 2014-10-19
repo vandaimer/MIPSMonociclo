@@ -1,0 +1,35 @@
+----------------------------------------------------------------------------------
+-- Company:   Federal University of Santa Catarina
+-- Engineer:  Prof. Dr. Eng. Rafael Luiz Cancian
+-- 
+-- Create Date:    
+-- Design Name: 
+-- Module Name:    
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Somador is
+	generic(
+		larguraDados: positive := 8
+	);
+	port(
+		Numero0, Numero1: in std_logic_vector(larguraDados-1 downto 0);
+		Soma: out std_logic_vector(larguraDados-1 downto 0)
+	);
+end entity;
+
+architecture comportamento of Somador is
+begin
+end architecture;

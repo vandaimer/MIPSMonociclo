@@ -1,0 +1,41 @@
+----------------------------------------------------------------------------------
+-- Company:   Federal University of Santa Catarina
+-- Engineer:  Prof. Dr. Eng. Rafael Luiz Cancian
+-- 
+-- Create Date:    
+-- Design Name: 
+-- Module Name:    
+-- Project Name: 
+-- Target Devices: 
+-- Tool versions: 
+-- Description: 
+--
+-- Dependencies: 
+--
+-- Revision: 
+-- Revision 0.01 - File Created
+-- Additional Comments: 
+--
+----------------------------------------------------------------------------------
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Controle is
+	port(
+		Opcode: in std_logic_vector(5 downto 0);
+		RegDst, DvC, LerMem, MemParaReg, ULAOp, EscMem, ULAFonte, EscReg: out std_logic;
+		OLAOp: out std_logic_vector(1 downto 0)
+	);
+end entity;
+
+architecture comportamento of Controle is
+	constant lw:std_logic_vector(5 downto 0 ) := "100011";
+	constant sw:std_logic_vector(5 downto 0 ) := "100011";
+begin
+	with Opcode select
+		LerMen <= '1' when lw,
+				  '0'
+	with Opcode select
+		EscMen <= '1' when sw,
+				  '0'
+end architecture;
